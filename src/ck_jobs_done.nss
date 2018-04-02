@@ -1,0 +1,19 @@
+//::///////////////////////////////////////////////
+//:: FileName ck_jobs_done
+//:://////////////////////////////////////////////
+//:://////////////////////////////////////////////
+//:: Created By: Script Wizard
+//:: Created On: 10/30/2002 13:46:00
+//:://////////////////////////////////////////////
+
+#include "rr_persist"
+
+int StartingConditional()
+{
+
+    // Inspect local variables
+    if(!(GPI(GetPCSpeaker(), "jobs_done") == 1))
+        return FALSE;
+
+    return TRUE;
+}

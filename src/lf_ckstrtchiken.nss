@@ -1,0 +1,16 @@
+//::///////////////////////////////////////////////
+//:: FileName lf_ckstrtchiken
+//:://////////////////////////////////////////////
+//:://////////////////////////////////////////////
+//:: Created By: Script Wizard
+//:: Created On: 11/15/2002 12:28:53 PM
+//:://////////////////////////////////////////////
+int StartingConditional()
+{
+
+    // Inspect local variables
+    if(!(GetLocalInt(GetPCSpeaker(), "start_chicken") == 1))
+        return FALSE;
+
+    return TRUE;
+}

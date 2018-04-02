@@ -1,0 +1,17 @@
+//::///////////////////////////////////////////////
+//:: FileName curlistore
+//:://////////////////////////////////////////////
+//:://////////////////////////////////////////////
+//:: Created By: Script Wizard
+//:: Created On: 7/30/2002 10:39:26 PM
+//:://////////////////////////////////////////////
+void main()
+{
+
+    // Either open the store with that tag or let the user know that no store exists.
+    object oStore = GetNearestObjectByTag("mt_test01");
+    if(GetObjectType(oStore) == OBJECT_TYPE_STORE)
+        OpenStore(oStore, GetPCSpeaker());
+    else
+        ActionSpeakStringByStrRef(53090, TALKVOLUME_TALK);
+}

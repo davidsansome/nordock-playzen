@@ -1,0 +1,16 @@
+//::///////////////////////////////////////////////
+//:: FileName evil_check
+//:://////////////////////////////////////////////
+//:://////////////////////////////////////////////
+//:: Created By: Script Wizard
+//:: Created On: 12/17/2002 6:38:14 AM
+//:://////////////////////////////////////////////
+int StartingConditional()
+{
+
+	// Restrict based on the player's alignment
+	if(GetAlignmentGoodEvil(GetPCSpeaker()) != ALIGNMENT_EVIL)
+		return FALSE;
+
+	return TRUE;
+}

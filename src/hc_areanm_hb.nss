@@ -1,0 +1,41 @@
+// hc_areanm_enter
+// Hardcore Ruleset Wandering critter setup
+// Archaegeo July 9, 2002
+
+// To use:  Set WANDERCHANCE to the percent chance of a wandering creature
+//          showing up if someone rests in the area.  Set WANDERSTRENGTH to
+//          the summon creature table to be used (1-9).
+
+// Be sure to use a different version of this file (rename it) for each area
+// that you need different strength wandering monsters in.
+
+// Place the file once changed in the Areas OnEnter script spot.  If you already
+// have one there, just cut and paste the lines below, minus the void main() part.
+
+#include "hc_inc_wandering"
+
+void main()
+{
+    int WANDERCHANCE=10; // 10% chance, chance this for more or less
+    int WANDERSTRENGTH=5; // Something from the Summon Creature V table
+
+    int WANDERTIMER=5; // Check for wandering monsters every X minutes.
+
+    if(WANDERTIMER)
+    {
+        if(GetLocalInt(OBJECT_SELF,"RANDOMCHECK") < (WANDERTIMER * 10))
+        {
+            SetLocalInt(OBJECT_SELF,"RANDOMCHECK",
+                GetLocalInt(OBJECT_SELF,"RANDOMCHECK")+1);
+            return;
+        }
+        DeleteLocalInt(OBJECT_SELF,"RANDOMCHECK");
+        object oPC=GetFirstPC();
+        while(GetIsObjectValid(oPC))
+        {
+            //if(GetArea(oPC)==OBJECT_SELF && !GetIsDM(oPC))
+            //    wander_check(oPC, WANDERCHANCE, WANDERSTRENGTH);
+            oPC=GetNextPC();
+        }
+    }
+}

@@ -1,0 +1,16 @@
+//::///////////////////////////////////////////////
+//:: FileName sc_talinthas01
+//:://////////////////////////////////////////////
+//:://////////////////////////////////////////////
+//:: Created By: Script Wizard
+//:: Created On: 10/12/2002 12:04:30 PM
+//:://////////////////////////////////////////////
+int StartingConditional()
+{
+
+    // Inspect local variables
+    if(!(GetLocalInt(GetPCSpeaker(), "nFirstTimeTalked") == 1))
+        return FALSE;
+
+    return TRUE;
+}

@@ -1,0 +1,19 @@
+//::///////////////////////////////////////////////
+//:: FileName ck_decline_job2
+//:://////////////////////////////////////////////
+//:://////////////////////////////////////////////
+//:: Created By: Script Wizard
+//:: Created On: 11/5/2002 16:32:52
+//:://////////////////////////////////////////////
+
+#include "rr_persist"
+
+int StartingConditional()
+{
+
+    // Inspect local variables
+    if(!(GPI(GetPCSpeaker(), "decline_job2") == 1))
+        return FALSE;
+
+    return TRUE;
+}

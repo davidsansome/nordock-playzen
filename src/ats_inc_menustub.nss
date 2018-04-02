@@ -1,0 +1,11 @@
+#include "ats_inc_common"
+#include "ats_inc_constant"
+#include "ats_config"
+#include "ats_inc_skill"
+#include "ats_inc_material"
+#include "ats_inc_cr_get"
+#include "ats_inc_menu_mat"
+#include "ats_inc_menu"
+#include "ats_inc_menu_cr"
+#include "ats_inc_cr_comp"
+

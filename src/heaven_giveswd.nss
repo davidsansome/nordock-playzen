@@ -1,0 +1,13 @@
+//::///////////////////////////////////////////////
+//:: FileName heaven_giveswd
+//:://////////////////////////////////////////////
+//:://////////////////////////////////////////////
+//:: Created By: Script Wizard
+//:: Created On: 2002-11-18 04:07:54
+//:://////////////////////////////////////////////
+void main()
+{
+    // Give the speaker the items
+    CreateItemOnObject("purityofthef_nod", GetPCSpeaker(), 1);
+    CreateItemOnObject("lordtyrmonssigne", GetPCSpeaker(), 1);
+}
